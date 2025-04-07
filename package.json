@@ -1,19 +1,25 @@
 {
-  "name": "mcp-client-and-server",
+  "name": "products-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nx run-many -t dev -p admin -p products-api -p frontend -p fulfillment-api --parallel 5",
-    "clean": "rm -rf node_modules && rm -rf pnpm-lock.yaml && rm -rf */**/node_modules && rm -rf */**/pnpm-lock.yaml"
+    "dev": "PORT=8082 tsx watch server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.6.5",
-  "devDependencies": {
-    "nx": "20.6.2"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
   },
-  "nx": {}
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.11.28",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  }
 }
